@@ -1,0 +1,16 @@
+.wrapper {
+    font-family: $main-font;
+    overflow: hidden;
+}
+
+.active {
+    &__title {
+        font-size: 30px;
+    }
+    &__done {
+       color: red;
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       font-weight: bold; 
+    }
+}

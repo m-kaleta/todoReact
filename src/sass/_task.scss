@@ -1,0 +1,17 @@
+.task {
+    &__date {
+        font-weight: 800;
+    }
+    &__button {
+        font-size: 15px;
+        margin: 10px 5px 0 0;
+        padding: 2px 5px;
+        transition: .3s;
+        &:hover {
+            background-color: black;
+            color: white;
+
+        }
+
+    }
+}

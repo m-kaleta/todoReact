@@ -22,17 +22,19 @@ const TaskList = (props) => {
 
     return (
         <>
+    <div className="wrapper"> 
         <div className="active">
-            <h1>Zadania do zrobienia</h1>
-            {activeTasks.length > 0 ? activeTasks : <p>Brawo wykonaleś wszystkie zadania :)</p>}
+            <h1 className="active__title">Zadania do zrobienia</h1>
+            {activeTasks.length > 0 ? activeTasks : <p className="active__done">Brawo, wykonaleś wszystkie zadania :)</p>}
         </div>
-
         <br/>
-
         <div className="done">
-            <h3>Zadania zrobione ({done.length})</h3>
-            {doneTasks}
+        <h2 className="done__title">Zadania zrobione ({done.length < 1 ? done.length : <span style={{color: "red"}}>{done.length}</span>})</h2>
+            <p>
+                {doneTasks}
+            </p>
         </div>
+    </div>
         </>
     )
 }

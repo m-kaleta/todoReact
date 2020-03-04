@@ -1,0 +1,19 @@
+.form {
+    width: 100%;
+    &__input {
+        font-size: 14px;
+        margin: 5px 10px;
+    }
+    &__button {
+        font-size: 15px;
+        padding: 2px 10px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        transition: .3s;
+        &:hover {
+            background-color: black;
+            color: white;
+
+        }
+    }
+}

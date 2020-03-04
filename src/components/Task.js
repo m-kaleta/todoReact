@@ -1,4 +1,5 @@
 import React from 'react';
+import "../sass/_task.scss"
 
 const Task = (props) => {
 
@@ -11,23 +12,25 @@ const Task = (props) => {
     if(active) {
     return (
         <div>
-            <p>
-                <strong style={important ? style : null }>{text}</strong> - do <span>{date} </span> 
-                <button onClick={() => props.change(id)}>Zostało wykonane</button>
-                <button onClick={() => props.delete(id)}>X</button>
+            <p className="task">
+                <strong style={important ? style : null }>{text}</strong>
+                <br/>
+                - wykonać do <span className="task__date">{date}! </span> 
+                <br/>
+                <button className="task__button" onClick={() => props.change(id)}>Zostało wykonane</button>
+                <button className="task__button" onClick={() => props.delete(id)}>X</button>
             </p>
         </div>
     );} else {
-
         const finish = new Date(finishDate).toLocaleString()
-        
         return(
         <div>
             <p>
-                <strong>{text}</strong> <em>(zrobić do {date}) </em>
+                <strong className="taskText">{text}</strong> <em>(zrobić do {date}) </em>
                 <br/>
                 - potwierdzenie wykonania {finish}
-                <button onClick={() => props.delete(id)}>X</button>
+                <br/>
+                <button className="task__button" onClick={() => props.delete(id)}>X</button>
             </p>
         </div>
     )}
